@@ -1,0 +1,5 @@
+<app-header></app-header>
+<app-gamecontrol (time)="onEvent($event)"></app-gamecontrol>
+<app-odd *ngFor="let oddEvent of oddEventData" [interval]="oddEvent"></app-odd>
+<app-even *ngFor="let evenEvent of evenEventData" [interval]="evenEvent"></app-even>
+

@@ -1,0 +1,32 @@
+<!--<input-->
+        <!--type="text"-->
+        <!--class="fancy-input"-->
+        <!--[(ngModel)]="username"-->
+        <!--(input) = "onInput()"-->
+<!--&gt;-->
+<!--<button-->
+    <!--class="fancy-button"-->
+    <!--[disabled] = "isEmpty"-->
+    <!--(click)="emptyInput()"-->
+<!--&gt;Empty</button>-->
+<!--<p>{{username}}</p>-->
+
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12">
+            <label>Username</label>
+            <input
+                    type="text"
+                    class="form-control"
+                    [(ngModel)] = "username"
+                    (input)="onInput()">
+            <!--[disabled]="isEmpty"-->
+            <!--(click)="emptyInput()"-->
+            <button
+                class="btn btn-primary"
+                [disabled] = "username === ''"
+                (click)="username = ''">Reset User</button>
+            <p>{{username}}</p>
+        </div>
+    </div>
+</div>

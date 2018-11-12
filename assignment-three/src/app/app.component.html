@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <button class="btn btn-primary"
+        (click)="onButtonClick()">Display Details</button>
+      <div class="text-container">
+        <p *ngIf="displayParagraph">Hi i'm here but I won't be soon.</p>
+      </div>
+        <p
+          *ngFor="let click of clickHolder; let i = index"
+          [ngStyle]="i > 3 ? {backgroundColor: 'blue'} : {backgroundColor: 'transparent'}"
+          [ngClass]="{moreThanFive: i > 3}">{{click}}</p>
+      <!--[ngStyle]="{backgroundColor: click > 4 ? getBackground() : 'white'}"-->
+    </div>
+  </div>
+</div>
+

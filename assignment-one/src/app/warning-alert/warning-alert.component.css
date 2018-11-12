@@ -1,0 +1,9 @@
+.warning {
+    background-color: red;
+    color: white;
+    padding: 20px;
+    border-radius: 5px;
+    font-family: Arial, sans-serif;
+    margin: 20px auto;
+    width: 50%;
+}
