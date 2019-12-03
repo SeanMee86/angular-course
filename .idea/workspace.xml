@@ -2,14 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="89d1c45c-cf1e-4e6a-bda7-39345cdfbcf6" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/services-start/src/app/logging.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services-assignment-start/src/app/counter.service.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services-assignment-start/src/app/users.service.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services-start/src/app/accounts.service.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assignment-four/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/assignment-four/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/course-project/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/course-project/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/course-project/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/course-project/src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/course-project/src/app/recipes/recipe-detail/recipe-detail.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/course-project/src/app/recipes/recipe-detail/recipe-detail.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/course-project/src/app/shared/dropdown.directive.ts" beforeDir="false" afterPath="$PROJECT_DIR$/course-project/src/app/shared/dropdown.directive.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services-start/src/app/account/account.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/services-start/src/app/account/account.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services-start/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/services-start/src/app/app.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services-start/src/app/app.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/services-start/src/app/app.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services-start/src/app/logging.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/services-start/src/app/logging.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services-start/src/app/new-account/new-account.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/services-start/src/app/new-account/new-account.component.ts" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -114,7 +115,7 @@
       <workItem from="1574441634555" duration="3008000" />
       <workItem from="1575306337610" duration="1673000" />
       <workItem from="1575316002773" duration="6327000" />
-      <workItem from="1575389749739" duration="6012000" />
+      <workItem from="1575389749739" duration="13899000" />
     </task>
     <servers />
   </component>
