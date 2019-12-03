@@ -2,26 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="89d1c45c-cf1e-4e6a-bda7-39345cdfbcf6" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/course-project/src/app/recipes/recipes.service.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/course-project/src/app/app.component.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/course-project/src/app/header/header.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/course-project/src/app/header/header.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/course-project/src/app/recipes/recipe-detail/recipe-detail.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/course-project/src/app/recipes/recipe-detail/recipe-detail.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/course-project/src/app/recipes/recipe-detail/recipe-detail.component.spec.ts" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/course-project/src/app/recipes/recipe-detail/recipe-detail.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/course-project/src/app/recipes/recipe-detail/recipe-detail.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/course-project/src/app/recipes/recipe-list/recipe-item/recipe-item.component.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/course-project/src/app/recipes/recipe-list/recipe-item/recipe-item.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/course-project/src/app/recipes/recipe-list/recipe-item/recipe-item.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/course-project/src/app/recipes/recipe-list/recipe-list.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/course-project/src/app/recipes/recipe-list/recipe-list.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/course-project/src/app/recipes/recipe-list/recipe-list.component.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/course-project/src/app/recipes/recipe-list/recipe-list.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/course-project/src/app/recipes/recipe-list/recipe-list.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/course-project/src/app/recipes/recipe.model.ts" beforeDir="false" afterPath="$PROJECT_DIR$/course-project/src/app/recipes/recipe.model.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/course-project/src/app/recipes/recipes.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/course-project/src/app/recipes/recipes.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/course-project/src/app/recipes/recipes.component.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/course-project/src/app/recipes/recipes.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/course-project/src/app/recipes/recipes.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/course-project/src/app/shopping-list/shopping-edit/shopping-edit.component.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/course-project/src/app/shopping-list/shopping-edit/shopping-edit.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/course-project/src/app/shopping-list/shopping-edit/shopping-edit.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/course-project/src/app/shopping-list/shopping-list.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/course-project/src/app/shopping-list/shopping-list.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/course-project/src/app/shopping-list/shopping-list.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/course-project/src/app/shopping-list/shopping-list.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/course-project/src/app/recipes/recipes.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/course-project/src/app/recipes/recipes.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/course-project/src/app/shopping-list/shopping-list.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/course-project/src/app/shopping-list/shopping-list.service.ts" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -127,7 +112,7 @@
       <workItem from="1574441634555" duration="3008000" />
       <workItem from="1575306337610" duration="1673000" />
       <workItem from="1575316002773" duration="6327000" />
-      <workItem from="1575389749739" duration="20171000" />
+      <workItem from="1575389749739" duration="21875000" />
     </task>
     <servers />
   </component>
