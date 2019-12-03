@@ -1,6 +1,5 @@
 import {
   Directive,
-  Renderer2,
   ElementRef,
   HostBinding,
   HostListener
@@ -10,11 +9,14 @@ import {
   selector: '[appDropdown]'
 })
 export class DropdownDirective {
+  @HostBinding('class.open') isOpen: boolean = false;
 
-  constructor(private elRef: ElementRef, private renderer: Renderer2) { }
+  @HostListener('document:click', ['$event.target']) toggleOpen(isDropdown){
+    this.isOpen = this.elRef.nativeElement.contains(isDropdown) ? !this.isOpen : false;
+  }
 
-  @HostListener('onclick') onMouseClick(eventData: Event){
-    console.log(eventData);
+  constructor(private elRef: ElementRef) {
+
   }
 
 }
