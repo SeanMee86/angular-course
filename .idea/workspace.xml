@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="89d1c45c-cf1e-4e6a-bda7-39345cdfbcf6" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/course-project/src/app/shopping-list/shopping-list.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/course-project/src/app/shopping-list/shopping-list.service.ts" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -26,7 +25,7 @@
   <component name="PropertiesComponent">
     <property name="HbShouldOpenHtmlAsHb" value="" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../python_sandbox" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -35,7 +34,7 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path" value="C:/Program Files/nodejs/node" />
     <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
-    <property name="ts.external.directory.path" value="C:\Users\seanm\Documents\code\angular-course\assignment-four\node_modules\typescript\lib" />
+    <property name="ts.external.directory.path" value="C:\Users\seanm\Documents\code\angular-course\course-project\node_modules\typescript\lib" />
     <property name="typescript-compiler-editor-notification" value="false" />
   </component>
   <component name="RecentsManager">
@@ -109,7 +108,9 @@
       <workItem from="1574441634555" duration="3008000" />
       <workItem from="1575306337610" duration="1673000" />
       <workItem from="1575316002773" duration="6327000" />
-      <workItem from="1575389749739" duration="22377000" />
+      <workItem from="1575389749739" duration="22485000" />
+      <workItem from="1575477918912" duration="36000" />
+      <workItem from="1575482750123" duration="5783000" />
     </task>
     <servers />
   </component>
