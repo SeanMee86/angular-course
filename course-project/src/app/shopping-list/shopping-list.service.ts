@@ -12,7 +12,7 @@ export class ShoppingListService {
     // new Ingredient('Tomatoes', 10)
   ];
 
-  getIngredients () {
+  get getIngredients () {
     return this.ingredients.slice();
   }
 

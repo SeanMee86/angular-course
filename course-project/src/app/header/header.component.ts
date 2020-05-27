@@ -6,7 +6,8 @@ import {Component, EventEmitter, OnInit, Output} from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-  @Output() displayChosen = new EventEmitter<string>();
+  @Output()
+  displayChosen = new EventEmitter<string>();
   navLinks: string[] = [
       'Recipes',
       'Shopping List'
@@ -20,5 +21,4 @@ export class HeaderComponent implements OnInit {
   chooseDisplay(e) {
     this.displayChosen.emit(e.target.innerText);
   }
-
 }
