@@ -17,7 +17,7 @@ export class ServersService {
     }
   ];
 
-  getServers() {
+  get getServers() {
     return this.servers;
   }
 
