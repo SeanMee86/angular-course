@@ -8,9 +8,9 @@ import { Component } from '@angular/core';
 export class AppComponent {
   // recipeDisplay: boolean = true;
   // shoppingDisplay: boolean = false;
-  loadedFeature = 'Recipes';
+  // loadedFeature = 'Recipes';
 
-  whichDisplay(e) {
+  // whichDisplay(e) {
     // if(e === 'Recipes') {
     //   this.recipeDisplay = true;
     //   this.shoppingDisplay = false;
@@ -18,6 +18,6 @@ export class AppComponent {
     //   this.recipeDisplay = false;
     //   this.shoppingDisplay = true;
     // }
-    this.loadedFeature = e;
-  }
+    // this.loadedFeature = e;
+  // }
 }

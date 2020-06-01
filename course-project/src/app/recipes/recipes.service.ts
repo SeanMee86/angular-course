@@ -29,8 +29,12 @@ export class RecipesService {
     )
   ];
 
-  getRecipes() {
+  get getRecipes() {
     return this.recipes.slice();
+  }
+
+  getRecipe(id: number) {
+    return this.recipes[id];
   }
 
   //This is a waste of code, just call addIngredients from ShoppingListService.
