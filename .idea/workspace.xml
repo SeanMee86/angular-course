@@ -121,21 +121,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="89d1c45c-cf1e-4e6a-bda7-39345cdfbcf6" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/routing-start/src/app/app-routing.module.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/routing-start/src/app/auth-guard.service.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/routing-start/src/app/auth.service.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routing-start/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/routing-start/src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routing-start/src/app/home/home.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/routing-start/src/app/home/home.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routing-start/src/app/home/home.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/routing-start/src/app/home/home.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routing-start/src/app/servers/edit-server/edit-server.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/routing-start/src/app/servers/edit-server/edit-server.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routing-start/src/app/servers/edit-server/edit-server.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/routing-start/src/app/servers/edit-server/edit-server.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routing-start/src/app/servers/server/server.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/routing-start/src/app/servers/server/server.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routing-start/src/app/servers/server/server.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/routing-start/src/app/servers/server/server.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routing-start/src/app/servers/servers.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/routing-start/src/app/servers/servers.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routing-start/src/app/servers/servers.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/routing-start/src/app/servers/servers.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routing-start/src/app/servers/servers.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/routing-start/src/app/servers/servers.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routing-start/src/app/users/users.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/routing-start/src/app/users/users.component.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -161,7 +147,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../gchc_sites/gchcrhr" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/course-project/src/app" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -171,7 +157,7 @@
     <property name="nodejs_interpreter_path" value="$PROJECT_DIR$/../../../../../Program Files/nodejs/node" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
-    <property name="ts.external.directory.path" value="C:\Users\Sean\Desktop\code-o\angular-course\routing-start\node_modules\typescript\lib" />
+    <property name="ts.external.directory.path" value="C:\Users\Sean\Desktop\code-o\angular-course\observables\obs-01-start\node_modules\typescript\lib" />
     <property name="typescript-compiler-editor-notification" value="false" />
   </component>
   <component name="RecentsManager">
@@ -245,7 +231,10 @@
       <workItem from="1590694939965" duration="3534000" />
       <workItem from="1590758937455" duration="15000" />
       <workItem from="1590770617976" duration="3139000" />
-      <workItem from="1590862613717" duration="5354000" />
+      <workItem from="1590862613717" duration="5384000" />
+      <workItem from="1590933141444" duration="9684000" />
+      <workItem from="1591054236154" duration="4746000" />
+      <workItem from="1591102527738" duration="715000" />
     </task>
     <servers />
   </component>
@@ -265,9 +254,9 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="1316" y="311" key="FileChooserDialogImpl" timestamp="1590783837642">
+    <state x="1316" y="311" key="FileChooserDialogImpl" timestamp="1591103905931">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state x="1316" y="311" key="FileChooserDialogImpl/0.0.2048.1112@0.0.2048.1112" timestamp="1590783837642" />
+    <state x="1316" y="311" key="FileChooserDialogImpl/0.0.2048.1112@0.0.2048.1112" timestamp="1591103905931" />
   </component>
 </project>

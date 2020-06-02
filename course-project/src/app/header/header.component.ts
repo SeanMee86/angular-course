@@ -1,4 +1,4 @@
-import {Component, EventEmitter, OnInit, Output} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -6,8 +6,7 @@ import {Component, EventEmitter, OnInit, Output} from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-  // @Output()
-  // displayChosen = new EventEmitter<string>();
+
   navLinks: string[] = [
       'Recipes',
       'Shopping List'
@@ -17,8 +16,4 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit() {
   }
-
-  // chooseDisplay(e) {
-  //   this.displayChosen.emit(e.target.innerText);
-  // }
 }
