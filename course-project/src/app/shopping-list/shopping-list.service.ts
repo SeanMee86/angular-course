@@ -7,14 +7,19 @@ import {Subject} from 'rxjs';
 })
 export class ShoppingListService {
   ingredientsChanged: Subject<Ingredient[]> = new Subject();
+  startedEditing: Subject<number> = new Subject();
 
   private ingredients: Ingredient[] = [
     // new Ingredient('Apples', 5),
     // new Ingredient('Tomatoes', 10)
   ];
 
-  get getIngredients () {
+  get getIngredients() {
     return this.ingredients.slice();
+  }
+
+  getIngredient(id: number) {
+    return this.ingredients[id];
   }
 
   onAddIngredient(ingredient) {

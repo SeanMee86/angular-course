@@ -1,0 +1,7 @@
+.container {
+  padding-top: 2rem;
+}
+
+input.ng-touched.ng-invalid {
+  border: 1px solid red;
+}
