@@ -1,4 +1,5 @@
 import {Component, OnInit} from '@angular/core';
+import {DataStorageService} from '../shared/data-storage.service';
 
 @Component({
   selector: 'app-header',
@@ -12,8 +13,18 @@ export class HeaderComponent implements OnInit {
       'Shopping List'
   ];
 
-  constructor() { }
+  constructor(
+    private dataStorage: DataStorageService
+  ) { }
 
   ngOnInit() {
+  }
+
+  addToDB() {
+    this.dataStorage.storeData();
+  }
+
+  onFetchRecipes() {
+    this.dataStorage.fetchData().subscribe();
   }
 }

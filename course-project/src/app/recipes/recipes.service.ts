@@ -8,29 +8,35 @@ import {Subject} from 'rxjs';
   providedIn: 'root'
 })
 export class RecipesService {
-  private recipes: Recipe[] = [
-    new Recipe(
-      'Thanksgiving Turkey',
-      'This a Turkey',
-      'https://cdn4.iconfinder.com/data/icons/food-drink-restaurant/96/food-06-512.png',
-      [
-        new Ingredient('Turkey', 1),
-        new Ingredient('Mashed Potatoes', 5)
-      ]
-    ),
-    new Recipe(
-      'Spicy Thai Bowl',
-      'This a Spicy Bowl!',
-      'https://cdn1.iconfinder.com/data/icons/thai/500/thai-asian-tahiland_14-512.png',
-      [
-        new Ingredient('Rice', 2),
-        new Ingredient('Peppers', 2000)
-      ]
-    )
-  ];
+  // private recipes: Recipe[] = [
+  //   new Recipe(
+  //     'Thanksgiving Turkey',
+  //     'This a Turkey',
+  //     'https://cdn4.iconfinder.com/data/icons/food-drink-restaurant/96/food-06-512.png',
+  //     [
+  //       new Ingredient('Turkey', 1),
+  //       new Ingredient('Mashed Potatoes', 5)
+  //     ]
+  //   ),
+  //   new Recipe(
+  //     'Spicy Thai Bowl',
+  //     'This a Spicy Bowl!',
+  //     'https://cdn1.iconfinder.com/data/icons/thai/500/thai-asian-tahiland_14-512.png',
+  //     [
+  //       new Ingredient('Rice', 2),
+  //       new Ingredient('Peppers', 2000)
+  //     ]
+  //   )
+  // ];
+  private recipes: Recipe[] = [];
   recipesChanged: Subject<Recipe[]> = new Subject();
 
   constructor(private slService: ShoppingListService) { }
+
+  set setRecipes(recipes: Recipe[]) {
+    this.recipes = recipes;
+    this.recipesChanged.next(this.recipes);
+  }
 
   get getRecipes() {
     return this.recipes.slice();
