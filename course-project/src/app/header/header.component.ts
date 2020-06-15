@@ -10,6 +10,7 @@ export class HeaderComponent implements OnInit {
 
   navLinks: string[] = [
       'Recipes',
+      'Authenticate',
       'Shopping List'
   ];
 
