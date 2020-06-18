@@ -4,6 +4,7 @@ import { catchError, tap } from 'rxjs/operators';
 import { BehaviorSubject, throwError } from 'rxjs';
 import { User } from '../shared/user.model';
 import { Router } from '@angular/router';
+import { environment } from "../../environments/environment";
 
 export interface AuthResponseData {
   kind: string;
@@ -20,8 +21,8 @@ export interface AuthResponseData {
 })
 export class AuthService {
   user = new BehaviorSubject<User>(null);
-  fbSignupURL = 'https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=AIzaSyCKNH-KPfiohJQmNrbR8coCsOSldEx-vvM';
-  fbLoginURL = 'https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=AIzaSyCKNH-KPfiohJQmNrbR8coCsOSldEx-vvM';
+  fbSignupURL = 'https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=' + environment.firebaseAPIKey;
+  fbLoginURL = 'https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=' + environment.firebaseAPIKey;
   expirationTimer: any;
 
   constructor(
