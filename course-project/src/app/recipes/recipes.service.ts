@@ -1,37 +1,21 @@
 import {Injectable} from '@angular/core';
 import {Recipe} from './recipe.model';
 import {Ingredient} from '../shared/ingredient.model';
-import {ShoppingListService} from '../shopping-list/shopping-list.service';
 import {Subject} from 'rxjs';
+import {Store} from '@ngrx/store';
+import * as ShoppingListActions from '../shopping-list/store/shopping-list.actions'
+import * as fromShoppingList from '../shopping-list/store/shopping-list.reducer';
 
 @Injectable({
   providedIn: 'root'
 })
 export class RecipesService {
-  // private recipes: Recipe[] = [
-  //   new Recipe(
-  //     'Thanksgiving Turkey',
-  //     'This a Turkey',
-  //     'https://cdn4.iconfinder.com/data/icons/food-drink-restaurant/96/food-06-512.png',
-  //     [
-  //       new Ingredient('Turkey', 1),
-  //       new Ingredient('Mashed Potatoes', 5)
-  //     ]
-  //   ),
-  //   new Recipe(
-  //     'Spicy Thai Bowl',
-  //     'This a Spicy Bowl!',
-  //     'https://cdn1.iconfinder.com/data/icons/thai/500/thai-asian-tahiland_14-512.png',
-  //     [
-  //       new Ingredient('Rice', 2),
-  //       new Ingredient('Peppers', 2000)
-  //     ]
-  //   )
-  // ];
   private recipes: Recipe[] = [];
   recipesChanged = new Subject<Recipe[]>();
 
-  constructor(private slService: ShoppingListService) { }
+  constructor(
+    private store: Store<fromShoppingList.AppState>
+  ) { }
 
   set setRecipes(recipes: Recipe[]) {
     this.recipes = recipes;
@@ -48,7 +32,7 @@ export class RecipesService {
 
   // This is a waste of code, just call addIngredients from ShoppingListService.
   addIngredientsToShoppingList(ingredients: Ingredient[]) {
-    this.slService.addIngredients(ingredients);
+    this.store.dispatch(new ShoppingListActions.AddIngredients(ingredients))
   }
 
   addRecipe(recipe: Recipe) {

@@ -1,4 +1,8 @@
-import {Routes, RouterModule, PreloadAllModules} from '@angular/router';
+import {
+  Routes,
+  RouterModule,
+  PreloadAllModules
+} from '@angular/router';
 import {NgModule} from '@angular/core';
 
 
