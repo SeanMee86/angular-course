@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { AuthResponseData, AuthService } from './auth.service';
 import { Observable } from 'rxjs';
-import {Router} from '@angular/router';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-auth',
@@ -27,7 +27,7 @@ export class AuthComponent {
     if (form.invalid) {
       return;
     }
-    const {email, password} = form.value;
+    const { email, password } = form.value;
     this.isLoading = true;
     let authObs: Observable<AuthResponseData>;
 
@@ -39,7 +39,7 @@ export class AuthComponent {
 
     authObs
       .subscribe(
-        response => {
+        _ => {
           this.isLoading = false;
           this.router.navigate(['/recipes']);
         },
