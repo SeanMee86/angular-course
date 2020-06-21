@@ -1,12 +1,22 @@
-import {Actions, Effect, ofType} from '@ngrx/effects';
-
+import {
+  Actions,
+  Effect,
+  ofType
+} from '@ngrx/effects';
 import * as AuthActions from './auth.action';
-import {catchError, map, switchMap, tap} from 'rxjs/operators';
+import {
+  catchError,
+  map,
+  switchMap,
+  tap
+} from 'rxjs/operators';
 import { HttpClient } from '@angular/common/http';
 import { environment } from '../../../environments/environment';
-import {of, throwError} from 'rxjs';
-import {Injectable} from '@angular/core';
-import {Router} from '@angular/router';
+import { of } from 'rxjs';
+import { Injectable } from '@angular/core';
+import { Router } from '@angular/router';
+import { User } from "../../shared/user.model";
+import { AuthService } from "../auth.service";
 
 export interface AuthResponseData {
   kind: string;
@@ -22,6 +32,13 @@ const handleAuthentication = (resData) => {
   const expirationDate = new Date(
     new Date().getTime() + +resData.expiresIn * 1000
   );
+  const user = new User(
+    resData.email,
+    resData.localId,
+    resData.idToken,
+    expirationDate
+  );
+  localStorage.setItem('userData', JSON.stringify(user));
   return new AuthActions.AuthenticateSuccess({
     email: resData.email,
     userId: resData.localId,
@@ -32,7 +49,6 @@ const handleAuthentication = (resData) => {
 
 const handleError = (errorRes) => {
   let errorMessage = 'An unknown error occurred!';
-  console.log(errorRes);
   if (!errorRes.error || !errorRes.error.error) {
     return of(new AuthActions.AuthenticateFail(errorMessage));
   }
@@ -70,6 +86,9 @@ export class AuthEffects {
             returnSecureToken: true
           }).
         pipe(
+          tap((resData) => {
+            this.authService.setLogoutTimer(+resData.expiresIn * 1000)
+          }),
           map(resData => {
             return handleAuthentication(resData);
           }),
@@ -78,7 +97,6 @@ export class AuthEffects {
           })
         )
     })
-
   )
 
   @Effect()
@@ -93,6 +111,9 @@ export class AuthEffects {
             returnSecureToken: true
           }
         ).pipe(
+          tap(resData => {
+            this.authService.setLogoutTimer(+resData.expiresIn * 1000)
+          }),
           map(resData => {
             return handleAuthentication(resData);
           }),
@@ -104,7 +125,7 @@ export class AuthEffects {
   );
 
   @Effect({dispatch: false})
-  authSuccess = this.actions$.pipe(
+  authRedirect = this.actions$.pipe(
     ofType(AuthActions.AUTHENTICATE_SUCCESS),
     tap(
       _ => {
@@ -113,9 +134,53 @@ export class AuthEffects {
     )
   );
 
+  @Effect()
+  autoLogin = this.actions$.pipe(
+    ofType(AuthActions.AUTO_LOGIN),
+    map(() => {
+      const userData: {
+        email: string;
+        id: string;
+        _token: string;
+        _tokenExpirationDate: string;
+      } = JSON.parse(localStorage.getItem('userData'));
+      if (!userData) {
+        return { type: 'DUMMY' }
+      }
+      const loadedUser = new User(
+        userData.email,
+        userData.id,
+        userData._token,
+        new Date(userData._tokenExpirationDate)
+      );
+      if (loadedUser.token) {
+        const expirationDuration = new Date(userData._tokenExpirationDate).getTime() - new Date().getTime();
+        this.authService.setLogoutTimer(expirationDuration);
+        return new AuthActions.AuthenticateSuccess({
+          email: userData.email,
+          userId: userData.id,
+          token: loadedUser.token,
+          expirationDate: new Date(userData._tokenExpirationDate)
+        })
+      }
+      return { type: 'DUMMY' }
+    })
+  )
+
+  @Effect({dispatch: false})
+  authLogout = this.actions$.pipe(
+    ofType(AuthActions.LOGOUT),
+    tap(() => {
+      localStorage.removeItem('userData');
+      this.router.navigate(['/authenticate']);
+      this.authService.clearLogoutTimer();
+    })
+  )
+
   constructor(
     private actions$: Actions,
     private http: HttpClient,
-    private router: Router
+    private router: Router,
+    private authService: AuthService
   ) { }
 }
