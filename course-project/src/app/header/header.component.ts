@@ -1,11 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { DataStorageService } from '../shared/data-storage.service';
-import { AuthService } from '../auth/auth.service';
 import { Subscription } from 'rxjs';
 import { Store } from '@ngrx/store';
 import * as fromApp from '../store/app.reducer';
 import { map } from 'rxjs/operators';
 import * as AuthActions from '../auth/store/auth.action';
+import * as RecipeActions from '../recipes/store/recipe.actions';
 
 @Component({
   selector: 'app-header',
@@ -17,8 +16,6 @@ export class HeaderComponent implements OnInit {
   userSub: Subscription;
 
   constructor(
-    private dataStorage: DataStorageService,
-    private authService: AuthService,
     private store: Store<fromApp.AppState>
   ) { }
 
@@ -31,11 +28,11 @@ export class HeaderComponent implements OnInit {
   }
 
   addToDB() {
-    this.dataStorage.storeData();
+    this.store.dispatch(new RecipeActions.StoreRecipes());
   }
 
   onFetchRecipes() {
-    this.dataStorage.fetchData().subscribe();
+    this.store.dispatch(new RecipeActions.FetchRecipes());
   }
 
   onLogout() {
