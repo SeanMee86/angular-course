@@ -17,7 +17,7 @@ import { CoreModule } from "./core.module";
   ],
   imports: [
     SharedModule,
-    BrowserModule,
+    BrowserModule.withServerTransition({ appId: 'serverApp' }),
     AppRoutingModule,
     HttpClientModule,
     CoreModule
