@@ -64,6 +64,7 @@ export class AppComponent implements OnInit {
   onAddHobby() {
     const control = new FormControl(null, Validators.required);
     (this.signupForm.get('hobbies') as FormArray).push(control);
+    console.log(this.signupForm.get('hobbies'));
   }
 
   forbiddenNames = (control: FormControl): {[s: string]: boolean} => {
